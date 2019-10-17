@@ -105,7 +105,7 @@ CardSimulationLoader requires Swift 5.1.
 
 - **Carthage:** Put this in your `Cartfile`:
 
-    github "gematik/CardReaderProvider-ApiKit" ~> 1.0
+    github "gematik/ref-CardSimulationLoaderKit" ~> 1.0
 
 ==== Setup for development
 
