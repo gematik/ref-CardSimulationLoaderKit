@@ -1,0 +1,126 @@
+== CardSimulation-Loader-swift
+
+CardSimulation-Loader-swift is the Swift counter-part to the Java https://build.top.local/source/git/refImpl/tools/CardSimulation-Loader.git[CardSimulation-Loader] project.
+The project serves as a (boot) loader for the G2-Kartensimulation.
+
+=== Usage
+
+The intented usage of this project is to ease integration and use of the G2-Kartensimulation with Swift projects. Specifically the Test-cases in these projects.
+This guide is separated in two (2) main parts. Describing (1) the usage of the `CardSimulation-Loader` framework (How-to) and (2) describing how-to maintain and explain the technical consideration(s) and implementation(s).
+
+==== Framework and Runner
+
+The project has two (main) products. One (1) The *CardSimulationLoader.framework*
+and the (2) executable *CardSimulationRunner*.
+Our main focus is on the framework as this contains all the logic and functionality.
+The runner is merely there to demonstrate/test the frameworks feature(s) and in
+rare cases can be used as a stand-alone CardSimulation-runner. This runner keeps
+monitoring the launched Java process for as long as either that process or its
+own process is shut down.
+
+===== CardSimulation-Loader
+
+The sole purpose of this framework is to launch and monitor a G2-Kartensimulation Java process.
+For detailed usage information see the inlined documentation on `SimulationManager`
+and `SimulationRunner`.
+
+*Starting the simulator*:
+
+Of course the best way to find out how-to use the CardSimulation-Loader is by checking the `SimulationManagerTest` and `SimulationRunnerTest` to see their intended and tested use-cases.
+Next to checking the test-cases you also find some (example) configuration files in the _Configuration.bundle_ [Tests/CardSimulationLoaderTests/Configuration.bundle].
+
+In general you would prepare such a *card-configuration* XML as in the Configuration.bundle and pass it to the `SimulationManager.shared` by invoking its:
+```Swift
+startSimulation(
+  configFile: URL,
+  preprocessor manipulators: [XMLPathManipulator] = [],
+  simulatorVersion: String = "2.7.6-352",
+  simulatorDirectory: String = "simulator",
+  waitUntilLaunched flag: Bool
+)
+```
+
+Note: you can specify the G2-Kartensimulation version it needs to download/use.
+
+The returned `SimulationRunnerType` can be used to monitor the newly started G2-Kartensimulation instance. To - for instance - figure out on which TLV-port the simulator is registered, just check the `SimulationRunnerType.mode`. When `running` the TLV TCP/IP port is projected there. And for convenience reasons made available through `var tlvPort: Int?` on SimulationRunnerType(s).
+
+This SimulationRunnerType instance will need a CardTerminalControllerType (e.g. from https://build.top.local/source/git/refImpl/mobszen/iOS/CardSimulation-CardReaderProvider.git[CardTerminalControllerType]) to expose this G2-Kartensimulation virtual `HealthCard` to the HealthCardAccess/Control realm.
+
+*Example*:
+
+```Swift
+/// Read configFile from included Resources Bundle
+let simulatorConfig = Bundle(for: MyClass.self)
+  .resourceFilePath(in: "Configuration", for: "configuration_EGKG2_80276883110000017222_gema5_TCP.xml")
+  .asURL
+/// Launch a G2-Kartensimulation with this configuration file
+let runner = try SimulationManager.shared.startSimulation(
+  configFile: simulatorConfig,
+  preprocessor: [
+    XMLPathManipulatorHolder.TLVPortManipulator(port: "0"),
+    XMLPathManipulatorHolder.RelativeToAbsolutePathManipulator(with: XMLPathManipulatorHolder.CardConfigFileXMLPath, absolutePath: simulatorConfig.deletingLastPathComponent()),
+    XMLPathManipulatorHolder.RelativeToAbsolutePathManipulator(with: XMLPathManipulatorHolder.ChannelConfigFileXMLPath, absolutePath: simulatorConfig.deletingLastPathComponent())
+  ],
+  waitUntilLaunched: true
+)
+
+... // Do amazing things with runner
+
+/// Stop the runner when done
+runner.stop(waitUntilTerminated: true)
+```
+
+=== Technical overview
+
+As described in the previous section(s) the CardSimulationLoader provides an easy-to-use API to launch and manage a G2-Kartensimulation.
+In order to achieve this we need to combine some various technologies/environments (read: Nexus <--> Java <--> Swift -> CardSimulationLoader API).
+Along with a nice twist to the SwiftPM and xcodeproj collaboration with regards to the Resource bundles we know from xcodeproject files, but https://bugs.swift.org/browse/SR-2866[apparently not exist] in the https://github.com/apple/swift-package-manager/blob/master/Documentation/Resources.md[Swift world]).
+
+The main components for this project to work:
+
+* Download G2-Kartensimulation Nexus artifacts
+* Launch and monitor Java Process
+
+These two (2) steps are taken care of when using the `SimulationManager` to launch a simulation.
+
+===== Maven step
+
+The `SimulationManager` creates a transient `pom.xml` and executes a shell script to run `mvn dependency:copy-dependencies`.
+And puts these artifacts in the same transient environment to be cleaned (manually) by calling `SimulationManager.clean` upon
+finishing with the simulator(s). Reason for this is to not download the artifacts for every simulator instance in case they
+are launch sequentially - which is reasonable to assume.
+
+===== Java process
+
+When the artifacts are in place, the `SimulationRunner` creates a JavaProcess that will be launched/forked in a separate process.
+And monitors this process by reading/parsing the `stdout` and `stderr` to detect the tlv-port number and successful initialization.
+
+To start developing the project follow the Project Setup section below 👇.
+
+=== Getting Started
+
+CardSimulationLoader requires Swift 5.1.
+
+==== Setup for integration:
+
+- **Carthage:** Put this in your `Cartfile`:
+
+    github "gematik/CardReaderProvider-ApiKit" ~> 1.0
+
+==== Setup for development
+
+You will need https://bundler.io/[Bundler], https://github.com/yonaskolb/XcodeGen[XcodeGen]
+and https://fastlane.tools[fastlane] to conveniently use the established development environment.
+
+. Update ruby gems necessary for build commands
+[source,Shell]
+$ bundle install --path vendor/gems
+
+. Checkout (and build) dependencies and generate the xcodeproject
+[source,Shell]
+$ bundle exec fastlane setup
+
+. Build the project
+[source,Shell]
+$ bundle exec fastlane build_all [build_mac, build_ios]
+

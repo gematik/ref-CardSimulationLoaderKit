@@ -1,0 +1,81 @@
+name: CardSimulationLoader
+options:
+  bundleIdPrefix: de.gematik.ti.cardsimulation
+  deploymentTarget:
+    macOS: 10.12
+    iOS: 12.1
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+    ALWAYS_SEARCH_USER_PATHS: NO
+  configs:
+    Release:
+      SWIFT_COMPILATION_MODE: wholemodule
+    Debug:
+      SWIFT_COMPILATION_MODE: incremental
+targets:
+  CardSimulationLoader:
+    type: framework
+    platform: macOS
+    info:
+      path: DerivedData/CardSimulationLoader/Info.plist
+    sources:
+      - Sources/CardSimulationLoader
+      - BridgeHeader.h
+    settings:
+      base:
+        SWIFT_OBJC_BRIDGING_HEADER: ${SRCROOT}/BridgeHeader.h
+    dependencies:
+      - carthage: AEXML
+      - carthage: StreamReader
+      - carthage: GemCommonsKit
+      - carthage: ObjCCommonsKit
+    scheme:
+      testTargets:
+        - CardSimulationLoaderTests
+      gatherCoverageData: true
+  SwiftLibsShadow:
+    type: framework
+    platform: macOS
+    settings:
+      base:
+        ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+    dependencies:
+      - target: CardSimulationLoader
+    scheme:
+  CardSimulationRunner:
+    type: tool
+    platform: macOS
+    settings:
+      base:
+        SWIFT_FORCE_DYNAMIC_LINK_STDLIB: YES
+        SWIFT_FORCE_STATIC_LINK_STDLIB: NO
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/SwiftLibsShadow.framework/Versions/Current/Frameworks"
+    sources:
+      - Sources/CardSimulationRunner
+    dependencies:
+      - target: SwiftLibsShadow
+      - target: CardSimulationLoader
+      - carthage: AEXML
+        embed: true
+      - carthage: StreamReader
+        embed: true
+      - carthage: GemCommonsKit
+        embed: true
+      - carthage: ObjCCommonsKit
+        embed: true
+    scheme:
+      testTargets:
+        - CardSimulationLoaderTests
+      gatherCoverageData: true
+  CardSimulationLoaderTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: CardSimulationLoader
+      - carthage: Nimble
+      - carthage: GemCommonsKit
+      - carthage: ObjCCommonsKit
+buildImplicitDependencies: true

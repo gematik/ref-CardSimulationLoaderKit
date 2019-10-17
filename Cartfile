@@ -1,0 +1,3 @@
+github "gematik/ref-GemCommonsKit" ~> 1.0
+github "tadija/AEXML" "4.3.4"
+github "hectr/swift-stream-reader" "0.2.1"
