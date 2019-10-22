@@ -10,8 +10,11 @@
 		0445034DA6FFF7DFBEB2A6A2B4A43A77 /* URL+ConfigurationFileProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB002DB57ECE2242544E7C64541D3DB0 /* URL+ConfigurationFileProcessor.swift */; };
 		04CCC791DA08375D778786D8C1E22507 /* CardSimulationLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCB0CDF452B2A946C924BA8EB59B015 /* CardSimulationLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04DB2E31BB969C896D4529529F4439CD /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B519D602C95D5CF69996C95687BDA62C /* Resources.bundle */; };
+		09A878AD0C1A6CD1D5E627CDB288A173 /* AEXMLExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7102F97177F95B9017831038653B4CF0 /* AEXMLExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0AE2FE9BE58CAD3DB40F0E38BE24B685 /* ObjCCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FE4546A37C58AAABDE1A5E31657245 /* ObjCCommonsKit.framework */; };
+		116BB86A6F72D747EBBDF5F5E4A3F688 /* AEXMLExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7102F97177F95B9017831038653B4CF0 /* AEXMLExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A81A82C358E17AB3386D5B5C997F4EC /* StreamReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BF8FA26E12D7F3EF0DD067EF052C51 /* StreamReader.framework */; };
+		2C1045D35F5C81C296E96C2B9729F10C /* AEXMLExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7102F97177F95B9017831038653B4CF0 /* AEXMLExt.framework */; };
 		2E2E879B71D3C9CB21356DC7B34F5F2C /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */; };
 		378656CD75AA12E26D46F7D098787AE6 /* SimulationProcessModeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5504B08657F5F0A2C123C311887CD /* SimulationProcessModeTest.swift */; };
 		37A6F128C5A0BB76E80DBD0ED0A1966A /* SimulationLoaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A271EB37957ACB02756458A1CA0D0A10 /* SimulationLoaderError.swift */; };
@@ -19,7 +22,9 @@
 		3B4A957139661332E636215DDF9ADF9B /* StreamReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BF8FA26E12D7F3EF0DD067EF052C51 /* StreamReader.framework */; };
 		3D2AF558803AF37C2E8536A317BDAADC /* ObjCCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FE4546A37C58AAABDE1A5E31657245 /* ObjCCommonsKit.framework */; };
 		3E76C889A1FF4963EBDADDBE1A9C7976 /* SimulationManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C9D2E0EB3923EABCB9ED0DA1F5AF6 /* SimulationManagerTest.swift */; };
+		3F6376972F48F5BD35428120E9FE6D33 /* AEXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		462ED7533CE6C08C8683EFD0086005FF /* GemCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19EBF5D45C35C54BFEC03837AC9B1A9 /* GemCommonsKit.framework */; };
+		46C9B5A9A3F46A5EC9871B6D85784571 /* AEXMLElementExtRootTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01D2804A0798DAF4E7FFA7D8582C073 /* AEXMLElementExtRootTest.swift */; };
 		4A3D4AE9312365F913CFE80DF901CF27 /* SimulationManager+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1876194757AF876C4C3CA02325F501C /* SimulationManager+Internal.swift */; };
 		4C66E2E784A3F8F0B0201D5958C04BA8 /* TempFilePathGeneratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50574AAB6175C2EE2552DB70BBD8A540 /* TempFilePathGeneratorType.swift */; };
 		4D7C82EF726F03126CF6169C0BC13E65 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A91F8B1BC340689C049FB988FF73DD /* XCTestManifests.swift */; };
@@ -36,16 +41,20 @@
 		6B89C20BC0B13C61968403CD37A23E13 /* XMLPathManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540407DD9DFB8F13C447463D10DFB874 /* XMLPathManipulator.swift */; };
 		7A45A83CC23C1F2017C413D69EB7B8A1 /* StreamReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62BF8FA26E12D7F3EF0DD067EF052C51 /* StreamReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B95D3DA23C7FF079BFBB7E5C104F569 /* SimulationRunner+JavaProcessDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36649FAE3B0C9596207D30FF5A932864 /* SimulationRunner+JavaProcessDelegate.swift */; };
+		7EA332D9AD57CF43CEC938CEFD33B063 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */; };
 		811DFD2E3E765FD210D6BBE2BA33F49C /* Configuration.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 538E3B7DFFF69953440181831019B7B9 /* Configuration.bundle */; };
 		83EFEAC3F68BF14C4A73EE46476EB2C8 /* SimulationProcessMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8AD53DFB53BC08DDA792D637EF7DC0 /* SimulationProcessMode.swift */; };
 		86091404DE24F546C39D73F91DA4A154 /* KeepAliveRunLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D4D56F1A1C153611A0FE3024DF5D5 /* KeepAliveRunLoop.swift */; };
+		9130B0CF61A6C2528A3816556F6036B5 /* AEXMLExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7102F97177F95B9017831038653B4CF0 /* AEXMLExt.framework */; };
 		977DCD533B832ECAF1BFB401BC589DB4 /* SimulationManagerExtInternalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F40665E41BB6424A409CE8AA384E36 /* SimulationManagerExtInternalTest.swift */; };
+		A888C56D7F9537FBD1E10C39FA1D34D1 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */; };
 		A99A45FD2A2495B82F1F6626B0109012 /* AEXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC14E9AB0A3E5370BA468AA10ADAB8EC /* GemCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19EBF5D45C35C54BFEC03837AC9B1A9 /* GemCommonsKit.framework */; };
 		ACC8F6338E0FA6557ADAA2EB776A32FB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC4F55FE6E4EB618E46DAE5761AAD4 /* main.swift */; };
 		AE66A45E0343E90E7D1794E892163232 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */; };
 		C2515A53BA102E602C753BD4DD1BEB03 /* Maven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E140A8B846780CF1238260A9992C5 /* Maven.swift */; };
 		C33C47A6A60FBB3A867A31EE904A56FA /* JavaProcessTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5E2183D366AAB1499511146C37A6D4 /* JavaProcessTest.swift */; };
+		C7E49399DAFF194A71879663736BF8F7 /* AEXMLElementExtRootTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01D2804A0798DAF4E7FFA7D8582C073 /* AEXMLElementExtRootTest.swift */; };
 		CB8F24F3E305B94D549CAEFBF19B3C68 /* URLExtConfigurationFileProcessorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80684FD50390183CCF92B6B7B1650F9B /* URLExtConfigurationFileProcessorTest.swift */; };
 		CE7FAA09FD7F73D0AF0F07BBE9B19A25 /* JavaProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F612CCD63365D51933D056CE9E03E /* JavaProcess.swift */; };
 		CFF7A6A79CA7A0F4CCA0FDD8FA637417 /* AEXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -61,17 +70,32 @@
 		EDF386FF042F8852D7A0659D97640EBA /* BridgeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 23595F9341F9FA93E1999E47E3995BA9 /* BridgeHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EECB2ADA41E6B15CB672632D3488DC17 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1B8E8932D6DA0ECECA8F383AF13ABFA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF7F14AE06C49F39975AEC07E57470F5 /* StreamReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62BF8FA26E12D7F3EF0DD067EF052C51 /* StreamReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F29FBFFF3431A940B8FE0556BA1BB54D /* AEXMLElement+Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC6B8715FF476AAC3AC303921AE6CAC /* AEXMLElement+Root.swift */; };
 		F2A5DB0A48EFBE1DEE02C358C20AE4E0 /* GemCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D19EBF5D45C35C54BFEC03837AC9B1A9 /* GemCommonsKit.framework */; };
 		FB7D947912BED07D403F5AC0FEBF57CC /* ObjCCommonsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32FE4546A37C58AAABDE1A5E31657245 /* ObjCCommonsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		011B784A247D35D39CAFDA9C3B1A0FBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE374C8520E73B2A3A2BE5DF79BFC05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67BE9B6538F8D0EA4E861A12A10C6E05;
+			remoteInfo = AEXMLExt;
+		};
 		0F4EC4A786DC8664F3EC344B90794901 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDE374C8520E73B2A3A2BE5DF79BFC05 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0F2DE495586CCBA6029AAD41151F283D;
 			remoteInfo = SwiftLibsShadow;
+		};
+		1CE9B70497C104BC0E0BBA461A7C9D54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE374C8520E73B2A3A2BE5DF79BFC05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67BE9B6538F8D0EA4E861A12A10C6E05;
+			remoteInfo = AEXMLExt;
 		};
 		BC438705079020583483CE6DB19248C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -111,12 +135,35 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3B52CF5C144B1673D4B0CF49F192452 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				116BB86A6F72D747EBBDF5F5E4A3F688 /* AEXMLExt.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B542DC71BDF810F2ED69DC2B8F9B89B4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F6376972F48F5BD35428120E9FE6D33 /* AEXML.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDD181720CCE5B482B58D825EC32F426 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				09A878AD0C1A6CD1D5E627CDB288A173 /* AEXMLExt.framework in Embed Frameworks */,
 				04CCC791DA08375D778786D8C1E22507 /* CardSimulationLoader.framework in Embed Frameworks */,
 				A99A45FD2A2495B82F1F6626B0109012 /* AEXML.framework in Embed Frameworks */,
 				D952A52347B731883C8DA0273DA6CCAB /* GemCommonsKit.framework in Embed Frameworks */,
@@ -131,6 +178,7 @@
 
 /* Begin PBXFileReference section */
 		047E140A8B846780CF1238260A9992C5 /* Maven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maven.swift; sourceTree = "<group>"; };
+		1166AC1F0C21C10DBDD10A745C923114 /* AEXMLExtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AEXMLExtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22561711538D1975861F5B2520FAD497 /* XMLPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLPath.swift; sourceTree = "<group>"; };
 		23595F9341F9FA93E1999E47E3995BA9 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
 		28F40665E41BB6424A409CE8AA384E36 /* SimulationManagerExtInternalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationManagerExtInternalTest.swift; sourceTree = "<group>"; };
@@ -151,6 +199,7 @@
 		662E62EC91698A288910E340F32A5474 /* XMLPathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLPathTest.swift; sourceTree = "<group>"; };
 		686A382AAA445A01B6B30EF8D16F8D2D /* AEXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AEXML.framework; sourceTree = "<group>"; };
 		697B6ED279A85E716AC196C8F9EA0353 /* CardSimulationLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardSimulationLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7102F97177F95B9017831038653B4CF0 /* AEXMLExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXMLExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80684FD50390183CCF92B6B7B1650F9B /* URLExtConfigurationFileProcessorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtConfigurationFileProcessorTest.swift; sourceTree = "<group>"; };
 		85FEE80AAD1727A7351D3B61F49E9C45 /* Pom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pom.swift; sourceTree = "<group>"; };
 		9427F4D3E046312C4A1CBD5C4D817C9C /* XMLElementManipulatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLElementManipulatorTest.swift; sourceTree = "<group>"; };
@@ -163,7 +212,9 @@
 		B519D602C95D5CF69996C95687BDA62C /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 		B73D4D56F1A1C153611A0FE3024DF5D5 /* KeepAliveRunLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAliveRunLoop.swift; sourceTree = "<group>"; };
 		B8C796D579347D9F5F20FDED754B6A2D /* SimulationRunnerType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SimulationRunnerType+Ext.swift"; sourceTree = "<group>"; };
+		C01D2804A0798DAF4E7FFA7D8582C073 /* AEXMLElementExtRootTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEXMLElementExtRootTest.swift; sourceTree = "<group>"; };
 		CB002DB57ECE2242544E7C64541D3DB0 /* URL+ConfigurationFileProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+ConfigurationFileProcessor.swift"; sourceTree = "<group>"; };
+		CDC6B8715FF476AAC3AC303921AE6CAC /* AEXMLElement+Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AEXMLElement+Root.swift"; sourceTree = "<group>"; };
 		CEDC20BD10F5F44B47A1C2900AE68F3C /* CardSimulationRunner */ = {isa = PBXFileReference; includeInIndex = 0; path = CardSimulationRunner; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19EBF5D45C35C54BFEC03837AC9B1A9 /* GemCommonsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GemCommonsKit.framework; sourceTree = "<group>"; };
 		D1B8E8932D6DA0ECECA8F383AF13ABFA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
@@ -194,10 +245,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9201019200E54B06EFA5A21EDBC90F5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA332D9AD57CF43CEC938CEFD33B063 /* AEXML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97415C9164F172C416833703BD9964AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9130B0CF61A6C2528A3816556F6036B5 /* AEXMLExt.framework in Frameworks */,
 				AE66A45E0343E90E7D1794E892163232 /* AEXML.framework in Frameworks */,
 				2A81A82C358E17AB3386D5B5C997F4EC /* StreamReader.framework in Frameworks */,
 				AC14E9AB0A3E5370BA468AA10ADAB8EC /* GemCommonsKit.framework in Frameworks */,
@@ -209,6 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1045D35F5C81C296E96C2B9729F10C /* AEXMLExt.framework in Frameworks */,
 				D3699F70593666D5813DD1EF3F713AFC /* CardSimulationLoader.framework in Frameworks */,
 				D21EDE72118A5B1A9FB09173877C759A /* Nimble.framework in Frameworks */,
 				F2A5DB0A48EFBE1DEE02C358C20AE4E0 /* GemCommonsKit.framework in Frameworks */,
@@ -216,12 +277,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF6CDE7F3142096E74D8C7EAD4DFE0E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A888C56D7F9537FBD1E10C39FA1D34D1 /* AEXML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061B566CB62B96814C9166A248BD77EB /* AEXMLExt */ = {
+			isa = PBXGroup;
+			children = (
+				CDC6B8715FF476AAC3AC303921AE6CAC /* AEXMLElement+Root.swift */,
+			);
+			name = AEXMLExt;
+			path = Sources/AEXMLExt;
+			sourceTree = "<group>";
+		};
 		1CB06575C5DFA118857251181B1F99C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				7102F97177F95B9017831038653B4CF0 /* AEXMLExt.framework */,
+				1166AC1F0C21C10DBDD10A745C923114 /* AEXMLExtTests.xctest */,
 				5CCB0CDF452B2A946C924BA8EB59B015 /* CardSimulationLoader.framework */,
 				697B6ED279A85E716AC196C8F9EA0353 /* CardSimulationLoaderTests.xctest */,
 				CEDC20BD10F5F44B47A1C2900AE68F3C /* CardSimulationRunner */,
@@ -230,9 +310,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		46642351BEAFC3514B9256CEB33AD531 /* AEXMLExtTests */ = {
+			isa = PBXGroup;
+			children = (
+				C01D2804A0798DAF4E7FFA7D8582C073 /* AEXMLElementExtRootTest.swift */,
+			);
+			name = AEXMLExtTests;
+			path = Tests/AEXMLExtTests;
+			sourceTree = "<group>";
+		};
 		46D81BBA2DF68EBBE3A493DEEA0E1924 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				46642351BEAFC3514B9256CEB33AD531 /* AEXMLExtTests */,
 				9AF8245BC1B09D50E66D5957B6F4C111 /* CardSimulationLoaderTests */,
 			);
 			path = Tests;
@@ -287,6 +377,8 @@
 			isa = PBXGroup;
 			children = (
 				23595F9341F9FA93E1999E47E3995BA9 /* BridgeHeader.h */,
+				061B566CB62B96814C9166A248BD77EB /* AEXMLExt */,
+				46642351BEAFC3514B9256CEB33AD531 /* AEXMLExtTests */,
 				6F89D54098263F1D3E4DD8BCEF61EDD9 /* CardSimulationLoader */,
 				932847EF3A1B859382091973721DB789 /* CardSimulationRunner */,
 				46D81BBA2DF68EBBE3A493DEEA0E1924 /* Tests */,
@@ -410,14 +502,49 @@
 				C5183B8EDD820E09A22CBD0F7B12634C /* Headers */,
 				1E6A5ABA2C19C83DD870A29A26939F8B /* Sources */,
 				97415C9164F172C416833703BD9964AA /* Frameworks */,
+				B3B52CF5C144B1673D4B0CF49F192452 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49C3C933F8787082C46ECAE290DEA4FF /* PBXTargetDependency */,
+			);
+			name = CardSimulationLoader;
+			productName = CardSimulationLoader;
+			productReference = 5CCB0CDF452B2A946C924BA8EB59B015 /* CardSimulationLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66A0B3CD58B8A156C2F83858930BED7D /* AEXMLExtTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41A51B454CBAACB5AE2C6166101D65DD /* Build configuration list for PBXNativeTarget "AEXMLExtTests" */;
+			buildPhases = (
+				35502E52162C578A83EAFBA4FBB2B9FB /* Sources */,
+				EF6CDE7F3142096E74D8C7EAD4DFE0E2 /* Frameworks */,
+				B542DC71BDF810F2ED69DC2B8F9B89B4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CardSimulationLoader;
-			productName = CardSimulationLoader;
-			productReference = 5CCB0CDF452B2A946C924BA8EB59B015 /* CardSimulationLoader.framework */;
+			name = AEXMLExtTests;
+			productName = AEXMLExtTests;
+			productReference = 1166AC1F0C21C10DBDD10A745C923114 /* AEXMLExtTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67BE9B6538F8D0EA4E861A12A10C6E05 /* AEXMLExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4DEF7F1169E3CD236CB1C8B94B52CD3 /* Build configuration list for PBXNativeTarget "AEXMLExt" */;
+			buildPhases = (
+				458A472F26E2EF003AC73D392CD32A13 /* Sources */,
+				9201019200E54B06EFA5A21EDBC90F5C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AEXMLExt;
+			productName = AEXMLExt;
+			productReference = 7102F97177F95B9017831038653B4CF0 /* AEXMLExt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BD85DABB5A29B83D15967A8AC77EDC93 /* CardSimulationRunner */ = {
@@ -451,6 +578,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8FD101F8ACB645B0BFD9BE9667CAEBE8 /* PBXTargetDependency */,
 				343E071C779C67C217A79337B531DDC0 /* PBXTargetDependency */,
 			);
 			name = CardSimulationLoaderTests;
@@ -465,6 +593,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					0F2DE495586CCBA6029AAD41151F283D = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					4274ECC9FF3FEC3634AAE6EB39004289 = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					66A0B3CD58B8A156C2F83858930BED7D = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					67BE9B6538F8D0EA4E861A12A10C6E05 = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					BD85DABB5A29B83D15967A8AC77EDC93 = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					D1797C1F62E5ED0191BA9243299F9D60 = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+				};
 			};
 			buildConfigurationList = BE69464E84E48D54E530A262E0098C21 /* Build configuration list for PBXProject "CardSimulationLoader" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -477,6 +625,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				67BE9B6538F8D0EA4E861A12A10C6E05 /* AEXMLExt */,
+				66A0B3CD58B8A156C2F83858930BED7D /* AEXMLExtTests */,
 				4274ECC9FF3FEC3634AAE6EB39004289 /* CardSimulationLoader */,
 				D1797C1F62E5ED0191BA9243299F9D60 /* CardSimulationLoaderTests */,
 				BD85DABB5A29B83D15967A8AC77EDC93 /* CardSimulationRunner */,
@@ -503,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E452CBC65B3AC02D21F6602936EBE1BC /* AEXMLDocumentExtXMLManipulationTest.swift in Sources */,
+				46C9B5A9A3F46A5EC9871B6D85784571 /* AEXMLElementExtRootTest.swift in Sources */,
 				C33C47A6A60FBB3A867A31EE904A56FA /* JavaProcessTest.swift in Sources */,
 				E5FADBA190087148CC7592470A5AA834 /* KeepAliveRunLoopTest.swift in Sources */,
 				977DCD533B832ECAF1BFB401BC589DB4 /* SimulationManagerExtInternalTest.swift in Sources */,
@@ -546,6 +697,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		35502E52162C578A83EAFBA4FBB2B9FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E49399DAFF194A71879663736BF8F7 /* AEXMLElementExtRootTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		458A472F26E2EF003AC73D392CD32A13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29FBFFF3431A940B8FE0556BA1BB54D /* AEXMLElement+Root.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEF340DA6420589159DC51B83D64817D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,6 +738,16 @@
 			isa = PBXTargetDependency;
 			target = 0F2DE495586CCBA6029AAD41151F283D /* SwiftLibsShadow */;
 			targetProxy = 0F4EC4A786DC8664F3EC344B90794901 /* PBXContainerItemProxy */;
+		};
+		49C3C933F8787082C46ECAE290DEA4FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67BE9B6538F8D0EA4E861A12A10C6E05 /* AEXMLExt */;
+			targetProxy = 011B784A247D35D39CAFDA9C3B1A0FBD /* PBXContainerItemProxy */;
+		};
+		8FD101F8ACB645B0BFD9BE9667CAEBE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67BE9B6538F8D0EA4E861A12A10C6E05 /* AEXMLExt */;
+			targetProxy = 1CE9B70497C104BC0E0BBA461A7C9D54 /* PBXContainerItemProxy */;
 		};
 		FFA754B0D03B6A1740D215C0E6001BFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -611,8 +788,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A9FL89PFFL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -641,6 +820,30 @@
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
+		};
+		03DD1E50306817C8C2ED6E86376EC615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = DerivedData/CardSimulationLoader/AEXMLExtInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.gematik.ti.cardsimulation.AEXMLExt;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
 		};
 		20E92F995507CAB5C6F43638575CCB47 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -731,6 +934,21 @@
 			};
 			name = Debug;
 		};
+		61F7B8B1F4E83370B91F4B5353950FC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.gematik.ti.cardsimulation.AEXMLExtTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
 		64F24BBA71532127C388A5E97BE24F66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -771,6 +989,45 @@
 			};
 			name = Debug;
 		};
+		783B85AF3B2F5ACAFDFAC942731B0646 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = DerivedData/CardSimulationLoader/AEXMLExtInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.gematik.ti.cardsimulation.AEXMLExt;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		A22B8BFD6721A3B511A760DD334EA733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.gematik.ti.cardsimulation.AEXMLExtTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		D799A78A4A05ACFBE466823EF3914AC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -802,8 +1059,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A9FL89PFFL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -859,6 +1118,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		41A51B454CBAACB5AE2C6166101D65DD /* Build configuration list for PBXNativeTarget "AEXMLExtTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61F7B8B1F4E83370B91F4B5353950FC9 /* Debug */,
+				A22B8BFD6721A3B511A760DD334EA733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
 		6783851E2A6B776631C39912028C116C /* Build configuration list for PBXNativeTarget "CardSimulationLoaderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -900,6 +1168,15 @@
 			buildConfigurations = (
 				64F24BBA71532127C388A5E97BE24F66 /* Debug */,
 				FBE764A054EA33A999EE92785ED9679D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		F4DEF7F1169E3CD236CB1C8B94B52CD3 /* Build configuration list for PBXNativeTarget "AEXMLExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				783B85AF3B2F5ACAFDFAC942731B0646 /* Debug */,
+				03DD1E50306817C8C2ED6E86376EC615 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";

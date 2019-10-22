@@ -6,6 +6,8 @@ options:
     iOS: 12.1
 settings:
   base:
+    DEVELOPMENT_TEAM: A9FL89PFFL
+    CODE_SIGN_IDENTITY: ""
     SWIFT_VERSION: 5.0
     ALWAYS_SEARCH_USER_PATHS: NO
   configs:
@@ -26,6 +28,8 @@ targets:
       base:
         SWIFT_OBJC_BRIDGING_HEADER: ${SRCROOT}/BridgeHeader.h
     dependencies:
+      - target: AEXMLExt
+        embed: true
       - carthage: AEXML
       - carthage: StreamReader
       - carthage: GemCommonsKit
@@ -43,6 +47,19 @@ targets:
     dependencies:
       - target: CardSimulationLoader
     scheme:
+  AEXMLExt:
+    type: framework
+    platform: macOS
+    info:
+      path: DerivedData/CardSimulationLoader/AEXMLExtInfo.plist
+    sources:
+      - Sources/AEXMLExt
+    dependencies:
+      - carthage: AEXML
+    scheme:
+      testTargets:
+        - AEXMLExtTests
+      gatherCoverageData: true
   CardSimulationRunner:
     type: tool
     platform: macOS
@@ -73,9 +90,18 @@ targets:
     platform: macOS
     sources:
       - path: Tests
+        excludes: "AEXMLExtTests"
     dependencies:
+      - target: AEXMLExt
       - target: CardSimulationLoader
       - carthage: Nimble
       - carthage: GemCommonsKit
       - carthage: ObjCCommonsKit
+  AEXMLExtTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - Tests/AEXMLExtTests
+    dependencies:
+      - carthage: AEXML
 buildImplicitDependencies: true

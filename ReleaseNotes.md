@@ -1,3 +1,6 @@
+# Release 1.0.2
+DRY RUN
+
 # Release 1.0.1
 fixed Carthage reference in README
 

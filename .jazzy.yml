@@ -8,3 +8,5 @@ theme: jony
 xcodebuild_arguments:
   - "-project"
   - 'CardSimulationLoader.xcodeproj'
+  - "-scheme"
+  - 'CardSimulationLoader'
